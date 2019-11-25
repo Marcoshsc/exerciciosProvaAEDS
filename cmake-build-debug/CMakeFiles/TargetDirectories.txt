@@ -1,0 +1,3 @@
+D:/C/exerciciosProva/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+D:/C/exerciciosProva/cmake-build-debug/CMakeFiles/exerciciosProva.dir
+D:/C/exerciciosProva/cmake-build-debug/CMakeFiles/edit_cache.dir

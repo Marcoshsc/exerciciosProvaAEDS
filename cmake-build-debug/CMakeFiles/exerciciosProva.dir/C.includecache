@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/C/exerciciosProva/complementares.h
+
+D:/C/exerciciosProva/exercicios.c
+stdio.h
+-
+stdlib.h
+-
+exercicios.h
+D:/C/exerciciosProva/exercicios.h
+
+D:/C/exerciciosProva/exercicios.h
+listas.h
+D:/C/exerciciosProva/listas.h
+pilhas.h
+D:/C/exerciciosProva/pilhas.h
+filas.h
+D:/C/exerciciosProva/filas.h
+
+D:/C/exerciciosProva/filas.h
+complementares.h
+D:/C/exerciciosProva/complementares.h
+
+D:/C/exerciciosProva/listas.h
+complementares.h
+D:/C/exerciciosProva/complementares.h
+
+D:/C/exerciciosProva/main.c
+stdio.h
+-
+exercicios.h
+D:/C/exerciciosProva/exercicios.h
+
+D:/C/exerciciosProva/pilhas.h
+complementares.h
+D:/C/exerciciosProva/complementares.h
+
