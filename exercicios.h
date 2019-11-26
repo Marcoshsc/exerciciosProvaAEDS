@@ -4,6 +4,12 @@
 #include "filas.h"
 #define EXERCICIOSPROVA_EXERCICIOS_H
 
+typedef struct {
+
+    TPilha pilha;
+
+} FilaPilhada;
+
 int isListsEqual(TLista lista1, TLista lista2);
 
 void inserirOrdemCrescente(TLista* lista, TipoItem item);
@@ -41,5 +47,17 @@ void ordemDecrescentePilha(TPilha* pilha);
 void transfere(TPilha* pilha1, TPilha* pilha2);
 
 void organizaMaiorMenor(TPilha* pilha);
+
+void FazFilaAlteradaVazia(FilaPilhada* fila);
+
+void DesenfileirarAlterada(FilaPilhada* fila, TipoItem* item);
+
+void EnfileirarAlterada(TipoItem item, FilaPilhada* fila);
+
+int tamanhoFilaAlterada(FilaPilhada fila);
+
+int vaziaFilaAlterada(FilaPilhada fila);
+
+void imprimeFilaAlterada(FilaPilhada* fila);
 
 #endif //EXERCICIOSPROVA_EXERCICIOS_H

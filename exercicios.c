@@ -487,9 +487,7 @@ void organizaMaiorMenor(TPilha* pilha) {
                     Empilha(item1, &aux);
             }
             imprimirPilha(&aux);
-            printf("SALTO\n\n\n");
         }
-        printf("SALTO\n\n");
         Empilha(menor, pilha);
         Empilha(maior, pilha);
         while(!isPilhaVazia(aux)) {
@@ -498,4 +496,61 @@ void organizaMaiorMenor(TPilha* pilha) {
         }
     }
     // no final ver se ainda tem algum elemento
+}
+
+void FazFilaAlteradaVazia(FilaPilhada* fila) {
+    FPVazia(&fila->pilha);
+}
+
+void EnfileirarAlterada(TipoItem item, FilaPilhada* fila) {
+    TPilha aux;
+    FPVazia(&aux);
+    TipoItem itemaux;
+    while(!isPilhaVazia(fila->pilha)) {
+        Desempilha(&fila->pilha, &itemaux);
+        Empilha(itemaux, &aux);
+    }
+    Empilha(item, &fila->pilha);
+    while(!isPilhaVazia(aux)) {
+        Desempilha(&aux, &itemaux);
+        Empilha(itemaux, &fila->pilha);
+    }
+}
+
+void DesenfileirarAlterada(FilaPilhada* fila, TipoItem* item) {
+    TPilha aux;
+    FPVazia(&aux);
+    TipoItem itemaux;
+    Desempilha(&fila->pilha, item);
+    while(!isPilhaVazia(fila->pilha)) {
+        Desempilha(&fila->pilha, &itemaux);
+        Empilha(itemaux, &aux);
+    }
+    while(!isPilhaVazia(aux)) {
+        Desempilha(&aux, &itemaux);
+        Empilha(itemaux, &fila->pilha);
+    }
+}
+
+int tamanhoFilaAlterada(FilaPilhada fila) {
+    return fila.pilha.tamanho;
+}
+
+int vaziaFilaAlterada(FilaPilhada fila) {
+    return isPilhaVazia(fila.pilha);
+}
+
+void imprimeFilaAlterada(FilaPilhada* fila) {
+    TipoItem item;
+    FilaPilhada aux;
+    FazFilaAlteradaVazia(&aux);
+    while(!vaziaFilaAlterada(*fila)) {
+        DesenfileirarAlterada(fila, &item);
+        EnfileirarAlterada(item, &aux);
+        printf("%d\n", item.chave);
+    }
+    while(!vaziaFilaAlterada(aux)) {
+        DesenfileirarAlterada(&aux, &item);
+        EnfileirarAlterada(item, fila);
+    }
 }

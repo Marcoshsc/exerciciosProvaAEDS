@@ -12,7 +12,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="03f10e45-f67e-4951-9acf-5c63cfd95fd8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exercicios.c" beforeDir="false" afterPath="$PROJECT_DIR$/exercicios.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exercicios.h" beforeDir="false" afterPath="$PROJECT_DIR$/exercicios.h" afterDir="false" />
@@ -72,7 +71,7 @@
       <workItem from="1574525209112" duration="7611000" />
       <workItem from="1574627069486" duration="8323000" />
       <workItem from="1574691565308" duration="4036000" />
-      <workItem from="1574721992747" duration="3705000" />
+      <workItem from="1574721992747" duration="7453000" />
     </task>
     <servers />
   </component>

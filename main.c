@@ -15,11 +15,12 @@ int main() {
     TPilha pilha1, pilha2;
     FPVazia(&pilha1);
     FPVazia(&pilha2);
+    FilaPilhada fila;
+    FazFilaAlteradaVazia(&fila);
     for (int i = 0; i < 10; ++i) {
         item.chave = i;
-        Empilha(item, &pilha1);
+        EnfileirarAlterada(item, &fila);
     }
-    organizaMaiorMenor(&pilha1);
-    imprimirPilha(&pilha1);
+    imprimeFilaAlterada(&fila);
     return 0;
 }
