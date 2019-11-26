@@ -19,7 +19,7 @@ int main() {
         item.chave = i;
         Empilha(item, &pilha1);
     }
-    transfere(&pilha1, &pilha2);
-    imprimirPilha(&pilha2);
+    organizaMaiorMenor(&pilha1);
+    imprimirPilha(&pilha1);
     return 0;
 }

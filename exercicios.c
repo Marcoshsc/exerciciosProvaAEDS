@@ -453,3 +453,49 @@ void transfere(TPilha* pilha1, TPilha* pilha2) {
     }
 }
 
+void organizaMaiorMenor(TPilha* pilha) {
+    TPilha aux;
+    FPVazia(&aux);
+    TipoItem item1, maior, menor;
+    for(int i = pilha->tamanho; i > 0; i -= 2) {
+        int foi1 = 0, foi2 = 0;
+        for(int j = 0; j < i; j++) {
+            Desempilha(pilha, &item1);
+            if(j == 0) {
+                maior = item1;
+                menor = item1;
+            }
+            else {
+                int empilhado = 0;
+                if(item1.chave > maior.chave) {
+                    if(!foi1 && !foi2)
+                        foi1 = 1;
+                    else
+                        Empilha(maior, &aux);
+                    maior = item1;
+                    empilhado = 1;
+                }
+                if(item1.chave < menor.chave) {
+                    if(!foi1 && !foi2)
+                        foi1 = 1;
+                    else
+                        Empilha(menor, &aux);
+                    menor = item1;
+                    empilhado = 1;
+                }
+                if(!empilhado)
+                    Empilha(item1, &aux);
+            }
+            imprimirPilha(&aux);
+            printf("SALTO\n\n\n");
+        }
+        printf("SALTO\n\n");
+        Empilha(menor, pilha);
+        Empilha(maior, pilha);
+        while(!isPilhaVazia(aux)) {
+            Desempilha(&aux, &item1);
+            Empilha(item1, pilha);
+        }
+    }
+    // no final ver se ainda tem algum elemento
+}

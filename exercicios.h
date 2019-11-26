@@ -40,4 +40,6 @@ void ordemDecrescentePilha(TPilha* pilha);
 
 void transfere(TPilha* pilha1, TPilha* pilha2);
 
+void organizaMaiorMenor(TPilha* pilha);
+
 #endif //EXERCICIOSPROVA_EXERCICIOS_H
