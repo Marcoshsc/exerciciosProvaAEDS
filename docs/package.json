@@ -1,0 +1,9 @@
+{
+  "name": "testingDocs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "docsify-cli": "^4.4.1"
+  }
+}
